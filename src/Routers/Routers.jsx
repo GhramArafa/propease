@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Loading from '../Components/Loading';
+import ScrollToTopButton from '../Components/ScrollToTopButton';
 
 // Lazy loaded pages
 const Home = lazy(() => import('../Pages/Home/Home'));
@@ -14,77 +15,80 @@ const ResetPassword = lazy(() => import('../Auth/Login/ResetPassword'));
 
 function Routers() {
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Navigate to="/home" />} />
+        <>
+            <ScrollToTopButton />
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Navigate to="/home" />} />
 
-                <Route
-                    path="/home"
-                    element={
-                        <Suspense fallback={<Loading />}>
-                            <Home />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/properties"
-                    element={
-                        <Suspense fallback={<Loading />}>
-                            <Properties />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/services"
-                    element={
-                        <Suspense fallback={<Loading />}>
-                            <Services />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/contact"
-                    element={
-                        <Suspense fallback={<Loading />}>
-                            <Contact />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/login"
-                    element={
-                        <Suspense fallback={<Loading />}>
-                            <Login />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/signup"
-                    element={
-                        <Suspense fallback={<Loading />}>
-                            <Signup />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/forgot-password"
-                    element={
-                        <Suspense fallback={<Loading />}>
-                            <ForgotPassword />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/reset-password"
-                    element={
-                        <Suspense fallback={<Loading />}>
-                            <ResetPassword />
-                        </Suspense>
-                    }
-                />
+                    <Route
+                        path="/home"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <Home />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/properties"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <Properties />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/services"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <Services />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/contact"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <Contact />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/login"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <Login />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/signup"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <Signup />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/forgot-password"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <ForgotPassword />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/reset-password"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <ResetPassword />
+                            </Suspense>
+                        }
+                    />
 
-            </Routes>
-        </Router>
+                </Routes>
+            </Router>
+        </>
     );
 };
 

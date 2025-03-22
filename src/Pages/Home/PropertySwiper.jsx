@@ -4,6 +4,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { SwiperSlide } from 'swiper/react';
 import CustomSwiper from '../../Components/CustomSwiper';
 import rent1 from '../../assets/rent1.png';
+import { motion } from "framer-motion";
 
 const generateProperties = (count) => {
     const properties = [];
@@ -27,7 +28,15 @@ const properties = generateProperties(11);
 export default function PropertySwiper() {
     return (
         <div className="w-full py-10 px-4 h-[90vh]">
-            <h2 className="text-3xl font-bold text-center mb-8">Recent Properties for Rent</h2>
+            <motion.h2
+                className="text-center text-2xl md:text-4xl font-semibold text-gray-800 mb-8"
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+            >
+                Recent Properties for Rent
+            </motion.h2>
 
             <CustomSwiper paginationId="property-swiper-pagination">
                 {properties?.map((property) => (
