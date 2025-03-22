@@ -1,6 +1,7 @@
 import { Card, Text } from '@mantine/core';
 import { SwiperSlide } from 'swiper/react';
 import CustomSwiper from '../../Components/CustomSwiper';
+import { motion } from "framer-motion";
 import icon1 from '../../assets/Icon1.svg';
 import icon2 from '../../assets/Icon2.svg';
 import icon3 from '../../assets/Icon3.svg';
@@ -16,7 +17,15 @@ const categories = [
 const FeaturedCategories = () => {
     return (
         <div className="w-full mx-auto py-10 px-4 bg-[#F9F9F9] h-[70vh] flex flex-col gap-14 justify-center items-center">
-            <h2 className="text-3xl font-bold text-center mb-8">Featured Categories</h2>
+            <motion.h2
+                className="text-center text-2xl md:text-4xl font-semibold text-gray-800"
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+            >
+                Featured Categories
+            </motion.h2>
 
             {/* Swiper Container */}
             <div className="w-full max-w-7xl relative">
@@ -27,7 +36,8 @@ const FeaturedCategories = () => {
                                 shadow="sm"
                                 padding="lg"
                                 radius="md"
-                                className="flex items-center justify-center gap-10 border rounded-xl min-h-[160px] hover:shadow-md transition-shadow bg-white hover:bg-[#0c332e] hover:text-white transition-colors duration-1000"
+                                className="flex items-center justify-center gap-10 border rounded-xl min-h-[160px] hover:shadow-md 
+                                    bg-white hover:bg-hover hover:text-white transition-colors duration-1000"
                             >
                                 <div className='bg-bg p-3 rounded-2xl'>
                                     <img src={category?.icon} alt={category?.name} className="w-12 h-12 object-contain" />
