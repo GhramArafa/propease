@@ -27,7 +27,7 @@ const FeaturedCategories = () => {
                                 shadow="sm"
                                 padding="lg"
                                 radius="md"
-                                className="flex items-center justify-center gap-10 border rounded-xl min-h-[160px] hover:shadow-md transition-shadow bg-white"
+                                className="flex items-center justify-center gap-10 border rounded-xl min-h-[160px] hover:shadow-md transition-shadow bg-white hover:bg-[#0c332e] hover:text-white transition-colors duration-1000"
                             >
                                 <div className='bg-bg p-3 rounded-2xl'>
                                     <img src={category?.icon} alt={category?.name} className="w-12 h-12 object-contain" />

@@ -38,3 +38,5 @@ const AuthFormLayout = ({ title, subtitle, children }) => {
 };
 
 export default AuthFormLayout;
+  
+

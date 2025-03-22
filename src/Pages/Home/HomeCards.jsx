@@ -33,11 +33,12 @@ const HomeCards= () => {
                         {item?.description}
                     </Text>
                     <button
-                        className="bg-main hover:bg-[#0c332e] rounded-2xl py-3 px-6 flex justify-center items-center gap-1.5 text-white w-fit"
-                    >
-                        {item?.buttonText}
-                        <GoArrowRight size={20} className='mt-1'/>
-                    </button>
+  className="bg-main hover:bg-white text-white hover:text-[#0c332e] rounded-2xl py-3 px-6 flex justify-center items-center gap-1.5 w-fit  transition-all duration-700 ease-in-out shadow-lg hover:shadow-2xl "
+>
+  {item?.buttonText}
+  <GoArrowRight size={20} className="mt-1" />
+</button>
+
                 </div>
                 <img src={item?.image} alt="House" className="w-32 h-32 object-contain" />
                 </Card>
