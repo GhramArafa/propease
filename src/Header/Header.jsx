@@ -40,12 +40,15 @@ return (
         {/* Right Auth Buttons */}
         <Group className='space-x-4'>
             <Link to="/login">
-            <Button className='bg-main rounded-full py-2 font-semibold text-white  min-w-[120px]'>
+            <Button className='bg-main rounded-full py-2 font-semibold text-white  min-w-[120px] border-2 border-[#0c332e] hover:bg-white hover:text-[#0c332e] 
+                  transition duration-1000"'>
                 Login
             </Button>
             </Link>
             <Link to="/signup">
-            <Button className='border border-main rounded-full py-2 font-semibold text-main min-w-[120px]'>
+            <Button className='border border-main rounded-full py-2 font-semibold text-main min-w-[120px]
+              hover:bg-[#0c332e] hover:text-white hover:border-white 
+              transition duration-1000'>
                 Sign up
             </Button>
             </Link>

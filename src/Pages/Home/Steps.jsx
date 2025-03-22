@@ -34,7 +34,8 @@ const Steps = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
             {steps?.map((step) => (
             <Card key={step?.id} shadow="md" padding="lg" radius="md" className="flex flex-col items-center text-center border-0">
-                <img src={step?.image} alt={`Step ${step?.id}`} className="w-32 h-32 object-contain mb-4" />
+                <img src={step?.image} alt={`Step ${step?.id}`} className="w-32 h-32 object-contain mb-4 transition-all duration-800 border border-transparent 
+             hover:scale-110 hover:shadow-xlg  hover:bg-[#F9F9F9] p-2 rounded-lg " />
                 <Text className="font-semibold text-main text-lg px-12">
                     {step?.id}. {step?.title}
                 </Text>

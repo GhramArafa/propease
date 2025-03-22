@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '@mantine/core';
 import image from '../../assets/realestate.png';
+import { motion } from "framer-motion";
+import { Image } from "@mantine/core";
 
 const RealEstateHero = () => {
     return (
@@ -16,22 +18,31 @@ const RealEstateHero = () => {
                 </p>
 
                 <Button
-                    radius="md"
-                    size="md"
-                    className="bg-yellowCustom  text-white rounded-2xl font-semibold w-fit px-20 py-3 uppercase tracking-widest"
-                >
-                    Contact Us
-                </Button>
+  radius="md"
+  size="md"
+  className="bg-yellowCustom text-white rounded-2xl font-semibold w-fit px-20 py-3 uppercase tracking-widest 
+             transition-all duration-1000 ease-in-out 
+             hover:bg-white hover:text-yellowCustom border border-transparent hover:border-yellowCustom
+             shadow-md hover:shadow-xl"
+>
+  Contact Us
+</Button>
+
+
             </div>
 
             {/* Right Image */}
-            <div className="w-full h-full md:w-[40%]">
-                <img
-                    src={image}
-                    alt="Real Estate"
-                    className="rounded-2xl object-cover w-full h-full"
-                />
-            </div>
+            <div className="w-full h-full md:w-[40%] overflow-hidden">
+  
+    <Image 
+      src={image}
+      alt="Real Estate"
+      className="rounded-2xl object-cover w-full h-full shadow-lg transition-transform duration-500 ease-in-out hover:scale-125  "
+      radius="xl"
+      withPlaceholder
+    />
+ 
+</div>
         </div>
     );
 };

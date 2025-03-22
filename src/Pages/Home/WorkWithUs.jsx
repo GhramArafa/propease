@@ -3,22 +3,29 @@ import { HiCheck } from "react-icons/hi";
 import { GoArrowRight } from "react-icons/go";
 import workOne from '../../assets/work1.png';
 import workTwo from '../../assets/work2.png';
-
+import { Card, Image, Text } from "@mantine/core";
 const WorkWithUs = () => {
     return (
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-bg p-8 h-[120vh]">
             {/* Left Side - Images */} 
             <div className="flex h-full justify-center gap-4 py-14">
-                <img
-                    src={workOne}
-                    alt="Family"
-                    className="w-40 h-40 md:w-[309px] md:h-[350px] rounded-xl object-cover items-start mb-auto"
-                />
-                <img
-                    src={workTwo}
-                    alt="House"
-                    className="w-52 h-40 md:w-[400px] md:h-[474px] rounded-xl object-cover items-end mt-auto"
-                />
+                
+
+        <img
+        src={workOne}
+         alt="Family"
+        className="w-40 h-40 md:w-[309px] md:h-[350px] rounded-xl object-cover items-start mb-auto
+         transition-transform duration-500 ease-in-out hover:scale-110 hover:rotate-30"
+        
+        />
+      
+      <img
+  src={workTwo}
+  alt="House"
+  className="w-52 h-40 md:w-[400px] md:h-[474px] rounded-xl object-cover items-end mt-auto 
+  transition-transform duration-500 ease-in-out hover:scale-110 hover:rotate-30"
+/>
+
             </div>
 
             {/* Right Side - Content */}
@@ -44,11 +51,13 @@ const WorkWithUs = () => {
 
                 {/* Button */}
                 <button
-                    className="bg-main hover:bg-[#0c332e] rounded-2xl py-3 px-6 flex justify-center items-center gap-1.5 text-white w-fit"
-                >
-                    Learn More
-                    <GoArrowRight size={20} className='mt-1'/>
-                </button>
+  className="bg-main text-white hover:bg-white hover:text-[#0c332e] rounded-2xl font-semibold py-3 px-6 flex justify-center items-center gap-1.5 w-fit  tracking-widest  transition-all duration-700 ease-in-out shadow-lg hover:shadow-2xl"
+>
+  Learn More
+  <GoArrowRight size={20} className="mt-1" />
+</button>
+
+
             </div>
         </div>
     );
