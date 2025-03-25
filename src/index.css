@@ -4,11 +4,18 @@
 
 body{
     overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 .swiper-pagination-custom {
     text-align: center;
     z-index: 10;
+}
+
+.m_8fb7ebe7:focus {
+    border: 1px solid #1F4B43 !important;
+    outline: none !important;
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet {

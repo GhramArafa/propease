@@ -19,7 +19,8 @@ const Hero = () => {
     const words = ["Find", "Your", "Perfect", "Home"];
 
     return (
-        <div className="relative h-[90vh] border-b-[15px] border-main overflow-hidden">
+        <div className="relative h-[90vh] border-b-[15px] border-main overflow-hidden ">
+
             {/* Swiper Background */}
             <Swiper
                 modules={[Autoplay, EffectFade]}
@@ -61,16 +62,23 @@ const Hero = () => {
                 </motion.h1>
 
                 {/* Search Bar */}
-                <div className="relative w-full max-w-lg">
+                <div className="w-full max-w-lg relative">
                     <TextInput
-                        placeholder="Enter Keywords..."
+                        placeholder="Enter keywords..."
                         classNames={{
-                            input: "rounded-full pl-4 pr-12 h-12 shadow-md w-full outline-none border border-gray-200",
+                        root: "w-full !outline-none",
+                        input: "!rounded-full !h-12 !pr-12 !shadow-md !w-full ",
                         }}
+                        rightSectionWidth={54} 
+                        rightSection={
+                        <Button
+                            className="!h-10 !w-10 !p-0 !rounded-full !bg-yellow-500 !absolute !right-1 !top-1/2 !transform !-translate-y-1/2"
+                            type="submit"
+                        >
+                            <FiSearch size={18} className="!text-white" />
+                        </Button>
+                        }
                     />
-                    <Button className="text-white absolute right-1 top-1/2 transform -translate-y-1/2 bg-yellow-500 rounded-full p-3">
-                        <FiSearch size={18} />
-                    </Button>
                 </div>
 
                 {/* Property Filters */}
@@ -83,8 +91,8 @@ const Hero = () => {
                             <Button
                                 key={filter}
                                 variant="outline"
-                                className="rounded-lg border-transparent bg-white text-main min-w-fit px-3 py-1 
-                                            hover:text-white hover:bg-main transition duration-1000 shadow-md hover:shadow-lg"
+                                className="!rounded-lg !border-transparent !bg-white !text-main !min-w-fit !px-3 !py-1 
+                                            hover:!text-white hover:!bg-main !transition !duration-1000 !shadow-md hover:!shadow-lg"
                             >
                                 {filter}
                             </Button>

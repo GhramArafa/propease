@@ -10,7 +10,7 @@ const WorkWithUs = () => {
     const isInView = useInView(sectionRef, { once: true });
 
     return (
-        <div ref={sectionRef} className="flex flex-col md:flex-row items-center justify-center gap-6 bg-bg p-8 h-[120vh]">
+        <div ref={sectionRef} className="flex flex-col md:flex-row items-center justify-center gap-6 bg-bg p-8 h-[120vh] !overflow-x-hidden max-lg:mb-8">
             {/* Left Side - Images */}
             <div className="flex h-full justify-center gap-4 py-14">
                 <motion.img

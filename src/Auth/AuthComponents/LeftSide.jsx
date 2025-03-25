@@ -4,7 +4,7 @@ import logo from '../../assets/logo.svg';
 
 const LeftSide = ({ title, subtitle }) => {
     return (
-        <section className={`flex justify-center gap-80 ${!title || !subtitle ? "flex-row items-start py-12" : "flex-col items-center"} w-1/2 !h-full`}>
+        <section className={`flex justify-center gap-80 ${!title || !subtitle ? "flex-row items-start py-10" : "flex-col items-center"} w-1/2 !h-full`}>
 
             <div className='bg-white/10 px-8 py-4 rounded-tl-3xl rounded-br-3xl'>
                 <Link to="/" className="flex items-center gap-0">

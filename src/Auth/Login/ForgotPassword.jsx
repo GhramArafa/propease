@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ForgotPasswordSchema } from '../ValidationSchema';
+import { MdOutlineMail } from "react-icons/md";
 
 const ForgotPassword = () => {
     const {
@@ -27,11 +28,11 @@ const ForgotPassword = () => {
 
     return (
         <AuthFormLayout>
-            <Group className="px-0 max-w-[48%]">
+            <Group className="!px-0 !max-w-[48%]">
 
-            <Group className="mb-8 w-full">
-                <Text className="text-3xl font-bold mb-2">Forgot Password?</Text>
-                <Text className="font-semibold text-sm">Don’t worry! It happens. 
+            <Group className="!mb-8 !w-full">
+                <Text className="!text-3xl !font-bold !mb-2">Forgot Password?</Text>
+                <Text className="!font-semibold !text-sm">Don’t worry! It happens. 
                         Please enter the email associated with your account.
                 </Text>
             </Group>
@@ -43,24 +44,28 @@ const ForgotPassword = () => {
                     name="email"
                     placeholder="Email"
                     error={errors.email?.message}
+                    icon={<MdOutlineMail color='black'/>}
                 />
 
                 <Link to="/reset-password">
                     <Button
                         type="submit"
-                        className="text-white font-bold p-2 !w-full bg-gradient-to-r from-text to-main !mt-8"
+                        className="!text-white !font-bold !p-2 !w-full !bg-gradient-to-r !from-text !to-main !mt-8"
                     >
                         Send Code
                     </Button>
                 </Link>
             </form>
 
-            <Group position="center" className="mt-4 flex justify-center items-center">
-                <Text className="cursor-pointer text-base font-semibold">Don’t have an account?</Text>
-                <Link to={'/signup'}>
-                    <Text className="cursor-pointer text-text text-base font-bold">Sign up</Text>
-                </Link>
-            </Group>
+            <div className='flex justify-center w-full'>
+                <Group justify="center" className="!mt-1 !flex !gap-0 ">
+                    <Text className="!cursor-pointer !text-base !font-semibold">Don’t have an account?</Text>
+                    <Link to={'/signup'}>
+                        <Text className="!cursor-pointer !text-[#769F7D] !text-base !font-bold">Sign up</Text>
+                    </Link>
+                </Group>
+            </div>
+            
 
             </Group>
         </AuthFormLayout>
