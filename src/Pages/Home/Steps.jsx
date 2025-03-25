@@ -29,7 +29,7 @@ const Steps = () => {
     ];
 
     return (
-        <section className="py-20 px-32 mx-auto bg-white w-full flex flex-col justify-center items-center gap-24">
+        <section className="py-20 px-4 lg:px-32 mx-auto bg-white w-full flex flex-col justify-center items-center gap-4 lg:gap-24  !overflow-x-hidden">
             {/* Title */}
             <motion.h2
                 className="text-center text-2xl md:text-4xl font-semibold text-gray-800"
@@ -42,7 +42,7 @@ const Steps = () => {
             </motion.h2>
 
             {/* Steps */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
                 {steps.map((step, index) => (
                     <motion.div
                         key={step.id}
@@ -67,7 +67,7 @@ const Steps = () => {
                                 className="w-32 h-32 object-contain mb-4 transition-all duration-800 border border-transparent 
                             hover:scale-110 hover:shadow-xl hover:bg-[#F9F9F9] p-2 rounded-lg"
                             />
-                            <Text className="font-semibold text-main text-lg px-12">
+                            <Text className="!font-semibold !text-main !text-lg !px-12">
                                 {step.id}. {step.title}
                             </Text>
                         </Card>

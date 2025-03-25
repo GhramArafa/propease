@@ -3,7 +3,7 @@ import { TextInput } from '@mantine/core';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Controller } from 'react-hook-form';
 
-const PasswordInput = ({ control, name, placeholder, error }) => {
+const PasswordInput = ({ control, name, placeholder, error, icon }) => {
 const [passwordVisibility, setPasswordVisibility] = useState(false);
 
 const togglePasswordVisibility = () => {
@@ -31,7 +31,7 @@ const togglePasswordVisibility = () => {
                         field.value && ( 
                         <div
                             onClick={togglePasswordVisibility}
-                            className="cursor-pointer absolute right-3 top-3.5"
+                            className="cursor-pointer "
                         >
                             {passwordVisibility ? (
                             <FaEyeSlash size={18} className="!text-blue-900" />
@@ -41,6 +41,7 @@ const togglePasswordVisibility = () => {
                         </div>
                         )
                     }
+                    leftSection={icon}
                 />
             )}
         />

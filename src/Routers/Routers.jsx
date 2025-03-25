@@ -12,6 +12,7 @@ const Login = lazy(() => import('../Auth/Login/Login'));
 const Signup = lazy(() => import('../Auth/Signup/Signup'));
 const ForgotPassword = lazy(() => import('../Auth/Login/ForgotPassword/'));
 const ResetPassword = lazy(() => import('../Auth/Login/ResetPassword'));
+const Verfication = lazy(() => import('../Auth/Login/Verfication'));
 
 function Routers() {
     return (
@@ -82,6 +83,14 @@ function Routers() {
                         element={
                             <Suspense fallback={<Loading />}>
                                 <ResetPassword />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/verfication"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <Verfication />
                             </Suspense>
                         }
                     />

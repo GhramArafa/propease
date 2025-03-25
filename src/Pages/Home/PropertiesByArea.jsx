@@ -18,7 +18,7 @@ const properties = [
 
 const PropertiesByArea = () => {
     return (
-        <section className="py-8 px-4 w-full flex flex-col justify-center items-center">
+        <section className="py-8 px-2 lg:px-4 w-full flex flex-col justify-center items-center !overflow-x-hidden">
             {/* Section Title */}
 
             <motion.h2
@@ -44,23 +44,23 @@ const PropertiesByArea = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                     >
-                        <Card className="w-full flex items-center justify-center gap-2 rounded-lg overflow-hidden cursor-pointer">
-                            <Image
+                        <div className="w-full flex items-center justify-center gap-6 rounded-lg overflow-hidden cursor-pointer">
+                            <img
                                 src={property?.image}
                                 alt={property?.name}
                                 height={100}
                                 className="object-cover rounded-lg "
                             />
                             <div className="">
-                                <Text className="font-semibold text-sm break-words max-w-[9ch]">
+                                <p className="font-semibold text-sm break-words max-w-[9ch]">
                                     {property?.name}
-                                </Text>
-                                <Text className="text-gray-500 text-xs">
+                                </p>
+                                <p className="text-gray-500 text-xs">
                                     {property?.count}{" "}
                                     {property?.count > 1 ? "Properties" : "Property"}
-                                </Text>
+                                </p>
                             </div>
-                        </Card>
+                        </div>
                     </motion.div>
                 ))}
             </div>

@@ -8,14 +8,16 @@ const RealEstateHero = () => {
     const isInView = useInView(sectionRef, { once: true });
     return (
         <motion.div 
-            ref={sectionRef} className="bg-main rounded-2xl p-8 md:py-8 md:px-18 h-[50vh] flex flex-col md:flex-row items-start justify-between gap-8 mb-20 mx-4"
+            ref={sectionRef} className="bg-main rounded-md lg:rounded-2xl max-lg:px-4 !overflow-x-hidden
+                p-8 md:py-8 md:px-18 h-[70vh] lg:h-[50vh] flex flex-col md:flex-row items-start 
+                justify-between gap-8 mb-4 lg:mb-20 mx-1 lg:mx-4"
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
         >
             {/* Left Content */}
             <motion.div 
-                className="text-white flex flex-col gap-12 max-w-lg"
+                className="text-white flex flex-col gap-4 lg:gap-12 max-w-lg"
                 initial={{ opacity: 0, x: -100 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 1, delay: 0.5 }}
@@ -25,7 +27,7 @@ const RealEstateHero = () => {
                 <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
                     Find your best <br /> Real Estate
                 </h1>
-                <p className="text-gray-200 text-base md:text-lg leading-relaxed">
+                <p className="text-gray-200 text-sm lg:text-base md:text-lg leading-relaxed">
                     We provide a complete service for the sale, <br />
                     purchase or rental of real estate.
                 </p>
@@ -52,10 +54,9 @@ const RealEstateHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
             >
                 <Image 
-                src={image}
-                alt="Real Estate"
-                className="rounded-2xl object-cover w-full h-full shadow-lg transition-transform duration-500 ease-in-out hover:scale-125 "
-                radius="xl"
+                    src={image}
+                    alt="Real Estate"
+                    className="object-cover w-full h-full !rounded-md lg:!rounded-xl shadow-lg transition-transform duration-500 ease-in-out hover:scale-125 "
                 />
             </motion.div>
         </motion.div>
